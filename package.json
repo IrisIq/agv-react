@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "author": "IrisIq <2637852337@qq.com>",
+  "main": "main.js",
+  "scripts": {
+    "dev": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi setup",
+    "setup": "umi setup",
+    "start": "npm run dev",
+    "startdmg": "electron ."
+  },
+  "dependencies": {
+    "antd": "^5.1.5",
+    "konva": "^8.4.0",
+    "react": "^18.2.0",
+    "react-konva": "^18.2.3",
+    "react-scripts": "^5.0.1",
+    "umi": "^4.0.46"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@umijs/lint": "^4.0.47",
+    "electron": "^22.0.2",
+    "eslint": "^8.32.0",
+    "node-sass": "^8.0.0",
+    "prettier": "2.8.3",
+    "sass-loader": "^13.2.0",
+    "stylelint": "^14.16.1",
+    "typescript": "^4.1.2"
+  }
+}
