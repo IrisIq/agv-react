@@ -7,11 +7,14 @@
     "build": "umi build",
     "postinstall": "umi setup",
     "setup": "umi setup",
-    "start": "npm run dev",
-    "startdmg": "electron ."
+    "start": "electron-forge start",
+    "startdmg": "electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "dependencies": {
     "antd": "^5.1.5",
+    "electron-squirrel-startup": "^1.0.0",
     "konva": "^8.4.0",
     "react": "^18.2.0",
     "react-konva": "^18.2.3",
@@ -19,6 +22,11 @@
     "umi": "^4.0.46"
   },
   "devDependencies": {
+    "@electron-forge/cli": "^6.0.4",
+    "@electron-forge/maker-deb": "^6.0.4",
+    "@electron-forge/maker-rpm": "^6.0.4",
+    "@electron-forge/maker-squirrel": "^6.0.4",
+    "@electron-forge/maker-zip": "^6.0.4",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@umijs/lint": "^4.0.47",
