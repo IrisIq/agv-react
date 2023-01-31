@@ -1,29 +1,29 @@
-import { Radio } from 'antd'
-import { useState } from 'react'
-import './menu.scss'
+import { Radio } from 'antd';
+import { useState } from 'react';
+import './menu.scss';
 
 const options = [
   {
     label: '○',
-    value: 'Apple',
+    value: 'round',
   },
   {
     label: '|',
-    value: 'Pear',
+    value: 'line',
   },
   {
-    label: 'X',
+    label: '□',
     value: 'Orange',
   },
-]
+];
 
 const Menu = () => {
-  const [value3, setValue3] = useState('Apple')
+  const [value3, setValue3] = useState('Apple');
 
   const onChange3 = ({ target: { value } }) => {
-    console.log('radio3 checked', value)
-    setValue3(value)
-  }
+    console.log('radio3 checked', value);
+    setValue3(value);
+  };
 
   return (
     <Radio.Group
@@ -32,6 +32,6 @@ const Menu = () => {
       value={value3}
       optionType="button"
     />
-  )
-}
-export default Menu
+  );
+};
+export default Menu;

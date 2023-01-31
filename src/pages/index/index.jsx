@@ -1,42 +1,56 @@
 import { Radio } from 'antd';
 import { useState } from 'react';
+import CanvasModal from './components/canvas/Canvas.jsx';
 import './components/menu/menu.scss';
 
 const options = [
   {
     label: '○',
-    value: 'Apple',
+    value: 'circle',
   },
   {
     label: '|',
-    value: 'Pear',
+    value: 'line',
   },
   {
-    label: 'X',
-    value: 'Orange',
+    label: '□',
+    value: 'rect',
   },
 ];
 
 export default function AgvIndex() {
-  const [value3, setValue3] = useState('Apple');
+  const [value, setValue] = useState(null);
 
-  const onChange3 = ({ target: { value } }) => {
+  const onChange = ({ target: { value } }) => {
     console.log('radio3 checked', value);
-    setValue3(value);
+    setValue(value);
+  };
+
+  // 点击2次重置按钮
+  const resetValue = () => {
+    console.log(3333);
+    setValue(null);
+  };
+
+  const radioBlur = (e) => {
+    console.log(111);
+    console.log(e);
+  };
+  const radioFocus = (e) => {
+    console.log(22222);
+    console.log(e);
   };
   return (
     <div>
-      {/* <Menu></Menu>
-      <CanvasModal></CanvasModal> */}
       <Radio.Group
         options={options}
-        onChange={onChange3}
-        value={value3}
+        onChange={onChange}
+        onBlur={radioBlur}
+        onFocus={radioFocus}
+        value={value}
         optionType="button"
       />
-      <div>
-        <canvas id="canvas" width={1000} height={800}></canvas>
-      </div>
+      <CanvasModal selectionValue={value} resetValue={resetValue}></CanvasModal>
     </div>
   );
 }
