@@ -21,30 +21,29 @@ const options = [
 export default function AgvIndex() {
   const [value, setValue] = useState(null);
 
-  const onChange = ({ target: { value } }) => {
-    console.log('radio3 checked', value);
-    setValue(value);
-  };
-
   // 点击2次重置按钮
   const resetValue = () => {
-    console.log(3333);
     setValue(null);
   };
-
+  //  获取焦点
+  const radioFocus = ({ target: { defaultValue } }) => {
+    if (value === defaultValue) {
+      setValue(null);
+      return false;
+    }
+    setValue(defaultValue);
+  };
+  // 失去焦点
   const radioBlur = (e) => {
-    console.log(111);
-    console.log(e);
+    // console.log(111);
+    // console.log(e);
   };
-  const radioFocus = (e) => {
-    console.log(22222);
-    console.log(e);
-  };
+
   return (
     <div>
       <Radio.Group
         options={options}
-        onChange={onChange}
+        // onChange={onChange}
         onBlur={radioBlur}
         onFocus={radioFocus}
         value={value}

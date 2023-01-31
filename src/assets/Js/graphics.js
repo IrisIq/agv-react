@@ -1,7 +1,6 @@
 import { Circle, Rect } from 'react-konva';
 
 const rectCompontent = (obj) => {
-  console.log(obj);
   const { x, y, index, recfClick } = obj;
   return (
     <Rect
