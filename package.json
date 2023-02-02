@@ -1,6 +1,7 @@
 {
   "private": true,
   "author": "IrisIq <2637852337@qq.com>",
+  "version": "1.0.0",
   "main": "main.js",
   "scripts": {
     "dev": "umi dev",
