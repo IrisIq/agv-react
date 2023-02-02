@@ -26,7 +26,7 @@ export default function CanvasModal(props) {
 
   // 点击画布添加图形
   const addPng = (e) => {
-    if (!selectionValue && clickTime == 1) {
+    if (!selectionValue) {
       return false;
     }
     // console.log(graphics[selectionValue](obj));
